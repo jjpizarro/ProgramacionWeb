@@ -18,6 +18,12 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioRespository usuarioRepositorio;
 	
+	@GetMapping("/home")
+	public String index(Model model) {
+		
+		return "home";
+	}
+	
 	@GetMapping("/registro")
 	public String mostrarFormRegistro(Model model) {
 		Usuario u = new Usuario(); 
