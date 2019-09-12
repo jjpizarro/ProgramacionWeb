@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<<meta charset="utf-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <title>Sports</title>
-
+<!-- Our Custom CSS -->
+<link rel="stylesheet" th:href="@{/css/estilos.css}">
 <!-- Bootstrap CSS CDN -->
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
@@ -16,7 +17,13 @@
 </head>
 <body>
 
-<div class="container py-5">
+<div class="container-fluid py-5">
+	
+		<!-- As a heading -->
+			<nav class="navbar navbar-light bg-light">
+				<span class="navbar-brand mb-0 h1">Registro</span>
+			</nav>
+		
     <div class="row">
         <div class="col-md-12">
             <h2 class="text-center mb-5">Registro de usuarios</h2>
