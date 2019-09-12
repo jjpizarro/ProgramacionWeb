@@ -21,12 +21,12 @@
 	
 		<!-- As a heading -->
 			<nav class="navbar navbar-light bg-light">
-				<span class="navbar-brand mb-0 h1">Registro</span>
+				<span class="navbar-brand mb-0 h1">Registro de usuarios</span>
 			</nav>
 		
     <div class="row">
         <div class="col-md-12">
-            <h2 class="text-center mb-5">Registro de usuarios</h2>
+            
             <div class="row">
                 <div class="col-md-6 mx-auto">
                     <div class="card border-secondary">
@@ -45,14 +45,14 @@
                                 </div>
                                  <div class="form-group">
                                     <label for="inputNombre">Nombres</label>
-                                    <input type="email" th:field="*{nombre}" class="form-control" id="inputNombre" placeholder="email@corre.com" required="">
+                                    <input type="text" th:field="*{nombre}" class="form-control" id="inputNombre" placeholder="Nombres" required="">
                                 </div>
                                 <div class="form-group">
                                     <label for="inputApellidos">Apellidos</label>
                                     <input type="email" th:field="*{apellidos}" class="form-control" id="inputApellidos" placeholder="Apellidos" required="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputPassword3">Contrasen&tilde;a</label>
+                                    <label for="inputPassword3">Contrase&ntilde;a</label>
                                     <input type="password" th:field="*{password}" class="form-control" id="inputPassword3" placeholder="password" title="At least 6 characters with letters and numbers" required="">
                                 </div>
                                  
