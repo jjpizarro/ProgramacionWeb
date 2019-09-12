@@ -38,30 +38,33 @@
 			</div>
 
 			<ul class="list-unstyled components">
-				<li><a href="/home"><i class="fas fa-home"></i>  Inicio</a></li>
-				<li><a href="#"><i class="fas fa-address-card"></i>  Mi perfil</a></li>
-				<li><a href="#"><i class="fas fa-cogs"></i>  Crear partida</a></li>
-				<li><a href="#"><i class="fas fa-search"></i>  Buscar partidas</a></li>
-				<li><a href="#"><i class="fas fa-edit"></i>  Mis partidas</a></li>
-				<li><a href="#"><i class="fas fa-comments"></i>  Mis Mensajes</a></li>
-				<li><a href="#"><i class="fas fa-comment-dots"></i>  Sugerencias</a></li>
-				<li><a href="#"><i class="fas fa-power-off"></i>  Cerrar sesi&oacute;n</a></li>
-				
+				<li><a href="/home"><i class="fas fa-home"></i> Inicio</a></li>
+				<li><a href="#"><i class="fas fa-address-card"></i> Mi
+						perfil</a></li>
+				<li><a href="#"><i class="fas fa-cogs"></i> Crear partida</a></li>
+				<li><a href="#"><i class="fas fa-search"></i> Buscar
+						partidas</a></li>
+				<li><a href="#"><i class="fas fa-edit"></i> Mis partidas</a></li>
+				<li><a href="#"><i class="fas fa-comments"></i> Mis
+						Mensajes</a></li>
+				<li><a href="#"><i class="fas fa-comment-dots"></i>
+						Sugerencias</a></li>
+				<li><a href="#"><i class="fas fa-power-off"></i> Cerrar
+						sesi&oacute;n</a></li>
+
 			</ul>
 		</nav>
 
 
 		<!-- Page Content -->
 		<div id="content">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<div class="container-fluid">
+			<div class="container-fluid">
 
-					<button type="button" id="sidebarCollapse" class="btn btn-info">
-						<i class="fas fa-align-left"></i>
-					</button>
+				<button type="button" id="sidebarCollapse" class="btn btn-info">
+					<i class="fas fa-align-left"></i>
+				</button>
 
-				</div>
-			</nav>
+			</div>
 		</div>
 	</div>
 
