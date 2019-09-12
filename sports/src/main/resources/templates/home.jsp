@@ -38,7 +38,7 @@
 			</div>
 
 			<ul class="list-unstyled components">
-				<li><a href="/home"><i class="fas fa-home"></i> Inicio</a></li>
+				<li><a href="/home"><i class="fas fa-home"></i> Home</a></li>
 				<li><a href="#"><i class="fas fa-address-card"></i> Mi
 						perfil</a></li>
 				<li><a href="#"><i class="fas fa-cogs"></i> Crear partida</a></li>
