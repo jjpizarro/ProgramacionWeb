@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>Collapsible sidebar using Bootstrap 4</title>
+<title>Sports</title>
 
 <!-- Bootstrap CSS CDN -->
 <link rel="stylesheet"
@@ -14,7 +14,7 @@
 	integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
 	crossorigin="anonymous">
 <!-- Our Custom CSS -->
-<link rel="stylesheet" href="@{/css/style.css}">
+<link rel="stylesheet" th:href="@{/css/estilos.css}">
 
 <!-- Font Awesome JS -->
 <script defer
@@ -30,50 +30,39 @@
 <body>
 	<div class="wrapper">
 
+
 		<!-- Sidebar -->
 		<nav id="sidebar">
-			<!-- Sidebar -->
-			<nav id="sidebar">
-				<div class="sidebar-header">
-					<h3>Bootstrap Sidebar</h3>
-				</div>
-
-				<ul class="list-unstyled components">
-					<p>Dummy Heading</p>
-					<li class="active"><a href="#homeSubmenu"
-						data-toggle="collapse" aria-expanded="false"
-						class="dropdown-toggle">Home</a>
-						<ul class="collapse list-unstyled" id="homeSubmenu">
-							<li><a href="#">Home 1</a></li>
-							<li><a href="#">Home 2</a></li>
-							<li><a href="#">Home 3</a></li>
-						</ul></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#pageSubmenu" data-toggle="collapse"
-						aria-expanded="false" class="dropdown-toggle">Pages</a>
-						<ul class="collapse list-unstyled" id="pageSubmenu">
-							<li><a href="#">Page 1</a></li>
-							<li><a href="#">Page 2</a></li>
-							<li><a href="#">Page 3</a></li>
-						</ul></li>
-					<li><a href="#">Portfolio</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</nav>
-
-
-			<!-- Page Content -->
-			<div id="content">
-				<nav class="navbar navbar-expand-lg navbar-light bg-light">
-					<div class="container-fluid">
-
-						<button type="button" id="sidebarCollapse" class="btn btn-info">
-							<i class="fas fa-align-left"></i> <span>Toggle Sidebar</span>
-						</button>
-
-					</div>
-				</nav>
+			<div class="sidebar-header">
+				<h3>Sports</h3>
 			</div>
+
+			<ul class="list-unstyled components">
+				<li><a href="/home"><i class="fas fa-home"></i>  Inicio</a></li>
+				<li><a href="#"><i class="fas fa-address-card"></i>  Mi perfil</a></li>
+				<li><a href="#"><i class="fas fa-cogs"></i>  Crear partida</a></li>
+				<li><a href="#"><i class="fas fa-search"></i>  Buscar partidas</a></li>
+				<li><a href="#"><i class="fas fa-edit"></i>  Mis partidas</a></li>
+				<li><a href="#"><i class="fas fa-comments"></i>  Mis Mensajes</a></li>
+				<li><a href="#"><i class="fas fa-comment-dots"></i>  Sugerencias</a></li>
+				<li><a href="#"><i class="fas fa-power-off"></i>  Cerrar sesi&oacute;n</a></li>
+				
+			</ul>
+		</nav>
+
+
+		<!-- Page Content -->
+		<div id="content">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container-fluid">
+
+					<button type="button" id="sidebarCollapse" class="btn btn-info">
+						<i class="fas fa-align-left"></i>
+					</button>
+
+				</div>
+			</nav>
+		</div>
 	</div>
 
 	<!-- jQuery CDN - Slim version (=without AJAX) -->
