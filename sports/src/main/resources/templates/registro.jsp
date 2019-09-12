@@ -46,12 +46,9 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="inputPassword3">Contrasen&tilde;a</label>
-                                    <input type="password" th:field="*{name}" class="form-control" id="inputPassword3" placeholder="password" title="At least 6 characters with letters and numbers" required="">
+                                    <input type="password" th:field="*{password}" class="form-control" id="inputPassword3" placeholder="password" title="At least 6 characters with letters and numbers" required="">
                                 </div>
-                                 <div class="form-group">
-                                    <label for="inputApellidos">Apellidos</label>
-                                    <input type="email" th:field="*{apellidos}" class="form-control" id="inputApellidos" placeholder="Apellidos" required="">
-                                </div>
+                                 
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-success btn-lg float-right">Registrarse</button>
                                 </div>
