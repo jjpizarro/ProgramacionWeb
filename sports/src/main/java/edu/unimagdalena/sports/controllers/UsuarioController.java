@@ -18,7 +18,7 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioRespository usuarioRepositorio;
 	
-	@GetMapping("/home")
+	@GetMapping("/home") 
 	public String index(Model model) {
 		
 		return "home";
