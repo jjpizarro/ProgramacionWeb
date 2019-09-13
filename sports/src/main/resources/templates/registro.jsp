@@ -16,13 +16,10 @@
 	
 </head>
 <body>
-
+<div class="wrapper">
 <div class="container-fluid py-5">
 	
-		<!-- As a heading -->
-			<nav class="navbar navbar-light bg-light">
-				<span class="navbar-brand mb-0 h1">Registro de usuarios</span>
-			</nav>
+		
 		
     <div class="row">
         <div class="col-md-12">
@@ -49,7 +46,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="inputApellidos">Apellidos</label>
-                                    <input type="email" th:field="*{apellidos}" class="form-control" id="inputApellidos" placeholder="Apellidos" required="">
+                                    <input type="text" th:field="*{apellidos}" class="form-control" id="inputApellidos" placeholder="Apellidos" required="">
                                 </div>
                                 <div class="form-group">
                                     <label for="inputPassword3">Contrase&ntilde;a</label>
@@ -72,6 +69,7 @@
     <!--/row-->
 </div>
 <!--/container-->
+</div>
 <!-- jQuery CDN - Slim version (=without AJAX) -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

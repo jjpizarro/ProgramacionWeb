@@ -23,7 +23,10 @@ public class UsuarioController {
 		
 		return "home";
 	}
-	
+	@GetMapping("/crear-partida")
+	public String mostrarFormCrearPartida(Model model) {
+		return "crearpartida";
+	}
 	@GetMapping("/registro")
 	public String mostrarFormRegistro(Model model) {
 		Usuario u = new Usuario(); 
