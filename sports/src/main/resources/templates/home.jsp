@@ -49,7 +49,7 @@
 						Mensajes</a></li>
 				<li><a href="#"><i class="fas fa-comment-dots"></i>
 						Sugerencias</a></li>
-				<li><a href="#"><i class="fas fa-power-off"></i> Cerrar
+				<li><a href="#" th:href="@{/logout}"><i class="fas fa-power-off"></i> Cerrar
 						sesi&oacute;n</a></li>
 
 			</ul>
