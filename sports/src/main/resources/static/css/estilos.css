@@ -31,7 +31,9 @@ a:focus {
     border-radius: 0;
     margin-bottom: 40px;
     /*box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);*/
+    color:white;
 }
+
 
 .navbar-btn {
     box-shadow: none;
@@ -69,8 +71,8 @@ span {
 }
 
 #sidebar.active {
-    min-width: 80px;
-    max-width: 80px;
+    min-width: 102px;
+    max-width: 102px;
     text-align: center;
 }
 
@@ -253,3 +255,5 @@ a.article:hover {
         display: none;
     }
 }
+
+
