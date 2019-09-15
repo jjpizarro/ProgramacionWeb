@@ -2,27 +2,36 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <!-- Head -->
-<head th:fragment="head(nombre)">
+<head th:fragment="head(nombre,tema)">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<title th:text="${nombre}"></title>
 	<!-- Our Custom CSS -->
-	<link rel="stylesheet" th:href="@{/css/estilos.css}">
+	<link rel="stylesheet" th:href="@{/css/} + ${tema} + .css">
 	<!-- Bootstrap CSS CDN -->
 	<link rel="stylesheet"
 		href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
 		integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
 		crossorigin="anonymous">
+		<!-- Font Awesome JS -->
+<script defer
+	src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+	integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+	crossorigin="anonymous"></script>
+<script defer
+	src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+	integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+	crossorigin="anonymous"></script>
 
 </head>
 <body>
 	<!-- Cabecera -->
-	<header th:fragment="header()">
+	<header th:fragment="header(texto)">
 		<!-- As a heading -->
-			<nav class="navbar navbar-light bg-light">
-				<span class="navbar-brand mb-0 h1">Registro de usuarios</span>
+			<nav class="navbar">
+				<span class="navbar-brand mb-0 h2" th:text="${texto}"></span>
 			</nav>
 	</header>
 	<div class="wrapper">
