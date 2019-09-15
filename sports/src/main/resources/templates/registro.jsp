@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="layout/base::head(Sportapp)">
+<head th:replace="layout/base::head(Sportapp,estilos)">
 
 	
 </head>
 <body>
-<header th:replace="layout/base::header()">
+<header th:replace="layout/base::header('Registro de usuario')">
 
 </header>
 <div class="wrapper">
