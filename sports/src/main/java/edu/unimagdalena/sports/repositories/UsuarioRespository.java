@@ -6,5 +6,7 @@ import org.springframework.stereotype.Repository;
 import edu.unimagdalena.sports.entities.Usuario;
 @Repository
 public interface UsuarioRespository extends JpaRepository<Usuario, Long> {
-
+	Usuario findByUsername(String username);
+	
+	
 }

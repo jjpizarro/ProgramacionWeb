@@ -5,6 +5,7 @@ import java.util.Date;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -56,8 +57,12 @@ public class Usuario implements Serializable {
 	@JoinTable(name="usuarios_partidas",
 	joinColumns= @JoinColumn( name="usuario_id", referencedColumnName="id"), 
 	inverseJoinColumns=@JoinColumn( name="partida_id", referencedColumnName="id"))
-
 	private Set<Partida> partidas;
+	
+	@ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "usuarios_roles", joinColumns = @JoinColumn(name = "user_id", referencedColumnName="id"), inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName="role_id"))
+    private Set<Role> roles;
+	
 	
 	public Usuario() {
 		super();
@@ -140,6 +145,18 @@ public class Usuario implements Serializable {
 	}
 	public void setSugerencias(Set<Sugerencia> sugerencias) {
 		this.sugerencias = sugerencias;
+	}
+	public Set<Partida> getPartidas() {
+		return partidas;
+	}
+	public void setPartidas(Set<Partida> partidas) {
+		this.partidas = partidas;
+	}
+	public Set<Role> getRoles() {
+		return roles;
+	}
+	public void setRoles(Set<Role> roles) {
+		this.roles = roles;
 	}
 	
 	

@@ -13,12 +13,14 @@ import edu.unimagdalena.sports.entities.Partida;
 import edu.unimagdalena.sports.entities.Usuario;
 import edu.unimagdalena.sports.repositories.PartidaRepository;
 import edu.unimagdalena.sports.repositories.UsuarioRespository;
+import edu.unimagdalena.sports.services.UsuarioService;
 
 @Controller
 public class UsuarioController {
 	
 	@Autowired
-	private UsuarioRespository usuarioRepositorio;
+	private UsuarioService usuarioService;
+	
 	@Autowired
 	private PartidaRepository partidaRepositorio;
 	
@@ -33,7 +35,7 @@ public class UsuarioController {
 	}
 	@PostMapping("/crear-partida")
 	public String crearPartida(@Valid Partida partida, Model model) {
-		Usuario  us = usuarioRepositorio.getOne((long) 1);
+		Usuario  us = usuarioService.getUsuarioById((long) 1);
 		partida.setCreador(us.getNombre());
 		
 		partidaRepositorio.save(partida);
@@ -57,7 +59,7 @@ public class UsuarioController {
 		if(result.hasErrors()) {
 			return "registro";
 		}
-		usuarioRepositorio.save(usuario);
+		usuarioService.save(usuario);
 		
 		model.addAttribute("user",usuario);
 		
