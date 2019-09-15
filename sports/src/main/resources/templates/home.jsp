@@ -41,7 +41,7 @@
 				<li><a href="/home"><i class="fas fa-home"></i> Home</a></li>
 				<li><a href="#"><i class="fas fa-address-card"></i> Mi
 						perfil</a></li>
-				<li><a href="#"><i class="fas fa-cogs"></i> Crear partida</a></li>
+				<li><a href="#" th:href="@{/crear-partida}"><i class="fas fa-cogs"></i> Crear partida</a></li>
 				<li><a href="#"><i class="fas fa-search"></i> Buscar
 						partidas</a></li>
 				<li><a href="#"><i class="fas fa-edit"></i> Mis partidas</a></li>
