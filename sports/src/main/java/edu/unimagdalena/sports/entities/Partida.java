@@ -1,6 +1,7 @@
 package edu.unimagdalena.sports.entities;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
@@ -14,6 +15,9 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
 @Entity
 @Table(name="partidas")
 public class Partida implements Serializable {
@@ -31,17 +35,21 @@ public class Partida implements Serializable {
 	private String ciudad;
 	@Column
 	@Temporal(TemporalType.TIMESTAMP)
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date fecha;
 	@Column
 	@Temporal(TemporalType.TIME)
-	private Date horaComienzo;
+	@DateTimeFormat(iso = ISO.TIME)
+	private LocalDateTime horaComienzo;
 	@Column
-	@Temporal(TemporalType.TIME)
-	private Date horaFin;	
+	@DateTimeFormat(iso = ISO.TIME)
+	private LocalDateTime horaFin;	
 	@Column
 	private Integer participantes;
 	@Column
 	private Integer suplentes;
+	@Column
+	private String descripcion;
 	
 	@ManyToMany(mappedBy = "partidas")
 	private Set<Usuario> usuariosParticipantes;
@@ -85,16 +93,17 @@ public class Partida implements Serializable {
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
-	public Date getHoraComienzo() {
+	
+	public LocalDateTime getHoraComienzo() {
 		return horaComienzo;
 	}
-	public void setHoraComienzo(Date horaComienzo) {
+	public void setHoraComienzo(LocalDateTime horaComienzo) {
 		this.horaComienzo = horaComienzo;
 	}
-	public Date getHoraFin() {
+	public LocalDateTime getHoraFin() {
 		return horaFin;
 	}
-	public void setHoraFin(Date horaFin) {
+	public void setHoraFin(LocalDateTime horaFin) {
 		this.horaFin = horaFin;
 	}
 	public Integer getParticipantes() {
@@ -108,6 +117,13 @@ public class Partida implements Serializable {
 	}
 	public void setSuplentes(Integer suplentes) {
 		this.suplentes = suplentes;
+	}
+	
+	public String getDescripcion() {
+		return descripcion;
+	}
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
 	public Set<Usuario> getUsuariosParticipantes() {
 		return usuariosParticipantes;
