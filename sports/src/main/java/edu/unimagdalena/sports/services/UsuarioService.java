@@ -1,7 +1,5 @@
 package edu.unimagdalena.sports.services;
 
-import org.springframework.stereotype.Service;
-
 import edu.unimagdalena.sports.entities.Usuario;
 
 
