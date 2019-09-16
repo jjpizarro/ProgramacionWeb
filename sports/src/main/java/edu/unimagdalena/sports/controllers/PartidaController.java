@@ -10,6 +10,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import edu.unimagdalena.sports.entities.Partida;
@@ -41,7 +42,7 @@ public class PartidaController {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         
 		Usuario  us = usuarioService.findUsuarioByUsername(auth.getName());
-		partida.setCreador(us.getNombre());
+		partida.setCreador(us.getUsername());
 		
 		partidaService.save(partida);
 		
@@ -52,4 +53,28 @@ public class PartidaController {
 		
 	}
 	
+	@GetMapping("/mis-partidas")
+	public String listarPartidas(Model model) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        
+		Usuario  us = usuarioService.findUsuarioByUsername(auth.getName());
+		List<Partida> partidas = partidaService.buscarPartidasPorUsuario(us);
+		model.addAttribute("mispartidas", partidas);
+		return "mispartidas"; 
+	}
+	
+	@GetMapping("/eliminar-partida/{id}")
+	public String eliminarPartida(@PathVariable("id") Long id,Model model) {
+		
+		Partida partida = partidaService.buscarPartidaPorId(id);
+		partidaService.delete(partida);
+		
+		
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        Usuario  us = usuarioService.findUsuarioByUsername(auth.getName());
+		List<Partida> partidas = partidaService.buscarPartidasPorUsuario(us);
+		model.addAttribute("mispartidas", partidas);
+		
+		return "mispartidas"; 
+	}
 }
