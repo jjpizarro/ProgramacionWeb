@@ -7,7 +7,7 @@
 	<header th:replace="layout/base::header('Mis partida')"></header>
 
 	<div class="wrapper">
-		<div class="container-fluid py-5">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
 
@@ -18,7 +18,37 @@
 									<h3 class="mb-0 my-2">Mis partidas</h3>
 								</div>
 								<div class="card-body">
-									
+								 	<div th:switch="${mispartidas}">
+								 	<p><a th:href="@{/crear-partida}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Crear Partida</a></p>
+								 	<h2 th:case="null">No se han creado partidas</h2>
+								 	 <div th:case="*">
+										<table class="table table-striped">
+											<thead>
+												<tr>
+													<th scope="col">Partida</th>
+													<th scope="col">Deporte</th>
+													<th scope="col">Ciudad</th>
+													<th scope="col">Fecha</th>
+													<th scope="col">Hora comienzo</th>
+													<th scope="col">Participantes</th>
+													<th scope="col">Acci&oacute;n</th>
+												</tr>
+											</thead>
+											<tbody>
+												 <tr th:each="partida : ${mispartidas}">
+												 	<td th:text="${partida.id}"></td>
+												 	<td th:text="${partida.deporte}"></td>
+												 	<td th:text="${partida.ciudad}"></td>
+												 	<td th:text="${partida.fecha}"></td>
+												 	<td th:text="${partida.horaComienzo}"></td>
+												 	<td><span class="badge badge-pill badge-warning" th:text="${#sets.size(partida.usuariosParticipantes)+'/'+partida.participantes}"></span></td>
+												 	<!-- https://github.com/waylau/thymeleaf-tutorial/blob/master/docs/expression-utility-objects.md -->
+												 	 <td><a th:href="@{/eliminar-partida/{id}(id=${partida.id})}"  class="btn btn-danger btn-sm active" role="button" aria-pressed="true">Eliminar</a></td>
+												 </tr>
+											</tbody>
+										</table>
+									</div>
+									</div>
 								</div>
 							</div>
 						</div>
