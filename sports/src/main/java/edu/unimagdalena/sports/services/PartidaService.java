@@ -9,7 +9,8 @@ public interface PartidaService {
 
  List<Partida>  buscarPartidasPorUsuario(Usuario usuario);
  void save(Partida partida);
- 
+ void delete(Partida partida);
+ Partida buscarPartidaPorId(Long id);
  
  
 }

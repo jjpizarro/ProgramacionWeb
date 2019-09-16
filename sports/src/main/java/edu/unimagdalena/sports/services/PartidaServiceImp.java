@@ -26,4 +26,15 @@ public class PartidaServiceImp implements PartidaService {
 
 	}
 
+	@Override
+	public void delete(Partida partida) {
+		partidaRepository.delete(partida);
+		
+	}
+
+	@Override
+	public Partida buscarPartidaPorId(Long id) {
+		return partidaRepository.getOne(id);
+	}
+
 }
