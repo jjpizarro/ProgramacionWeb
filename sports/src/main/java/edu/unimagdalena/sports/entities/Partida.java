@@ -40,10 +40,10 @@ public class Partida implements Serializable {
 	@Column
 	@Temporal(TemporalType.TIME)
 	@DateTimeFormat(iso = ISO.TIME)
-	private LocalDateTime horaComienzo;
+	private Date horaComienzo;
 	@Column
 	@DateTimeFormat(iso = ISO.TIME)
-	private LocalDateTime horaFin;	
+	private Date horaFin;	
 	@Column
 	private Integer participantes;
 	@Column
@@ -94,16 +94,17 @@ public class Partida implements Serializable {
 		this.fecha = fecha;
 	}
 	
-	public LocalDateTime getHoraComienzo() {
+	
+	public Date getHoraComienzo() {
 		return horaComienzo;
 	}
-	public void setHoraComienzo(LocalDateTime horaComienzo) {
+	public void setHoraComienzo(Date horaComienzo) {
 		this.horaComienzo = horaComienzo;
 	}
-	public LocalDateTime getHoraFin() {
+	public Date getHoraFin() {
 		return horaFin;
 	}
-	public void setHoraFin(LocalDateTime horaFin) {
+	public void setHoraFin(Date horaFin) {
 		this.horaFin = horaFin;
 	}
 	public Integer getParticipantes() {
