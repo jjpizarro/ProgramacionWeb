@@ -44,12 +44,12 @@
 				<li><a href="#" th:href="@{/crear-partida}"><i class="fas fa-cogs"></i> Crear partida</a></li>
 				<li><a href="#"><i class="fas fa-search"></i> Buscar
 						partidas</a></li>
-				<li><a href="#"><i class="fas fa-edit"></i> Mis partidas</a></li>
+				<li><a th:href="@{/mis-partidas}"><i class="fas fa-edit"></i> Mis partidas</a></li>
 				<li><a href="#"><i class="fas fa-comments"></i> Mis
 						Mensajes</a></li>
 				<li><a href="#"><i class="fas fa-comment-dots"></i>
 						Sugerencias</a></li>
-				<li><a href="#" th:href="@{/logout}"><i class="fas fa-power-off"></i> Cerrar
+				<li><a th:href="@{/logout}"><i class="fas fa-power-off"></i> Cerrar
 						sesi&oacute;n</a></li>
 
 			</ul>
