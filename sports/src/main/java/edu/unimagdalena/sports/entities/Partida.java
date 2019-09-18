@@ -3,6 +3,7 @@ package edu.unimagdalena.sports.entities;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -52,9 +53,10 @@ public class Partida implements Serializable {
 	private String descripcion;
 	
 	@ManyToMany(mappedBy = "partidas")
-	private Set<Usuario> usuariosParticipantes;
+	private Set<Usuario> usuariosParticipantes ;
 	public Partida() {
 		super();
+		usuariosParticipantes = new HashSet<>(); 
 		// TODO Auto-generated constructor stub
 	}
 	public Long getId() {

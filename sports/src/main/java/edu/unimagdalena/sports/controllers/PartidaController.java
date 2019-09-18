@@ -47,6 +47,7 @@ public class PartidaController {
 		partidaService.save(partida);
 		
 		List<Partida> partidas = partidaService.buscarPartidasPorUsuario(us);
+		
 		model.addAttribute("mispartidas", partidas);
 		return "mispartidas";
 		
