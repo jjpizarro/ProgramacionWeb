@@ -37,4 +37,9 @@ public class PartidaServiceImp implements PartidaService {
 		return partidaRepository.getOne(id);
 	}
 
+	@Override
+	public List<Partida> buscarPartidaPorDeporteCiudadDepto(String deporte, String ciudad, String dpto) {
+		return partidaRepository.findPartidaByDeporteOrCiudadOrProvincia(deporte, ciudad, dpto);
+	}
+
 }

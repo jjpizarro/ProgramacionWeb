@@ -18,8 +18,9 @@
 									<h3 class="mb-0 my-2">Mis partidas</h3>
 								</div>
 								<div class="card-body">
-								 	<div th:switch="${mispartidas}">
+								 	
 								 	<p><a th:href="@{/crear-partida}" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">Crear Partida</a></p>
+								 	<div th:switch="${mispartidas}">
 								 	<h2 th:case="null">No se han creado partidas</h2>
 								 	 <div th:case="*">
 										<table class="table table-striped">
