@@ -59,7 +59,7 @@ public class Usuario implements Serializable {
 	inverseJoinColumns=@JoinColumn( name="partida_id", referencedColumnName="id"))
 	private Set<Partida> partidas;
 	
-	@ManyToMany(cascade = CascadeType.ALL)
+	@ManyToMany(cascade = CascadeType.PERSIST)
     @JoinTable(name = "usuarios_roles", joinColumns = @JoinColumn(name = "user_id", referencedColumnName="id"), inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName="role_id"))
     private Set<Role> roles;
 	

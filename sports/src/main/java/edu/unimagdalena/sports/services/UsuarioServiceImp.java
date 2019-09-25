@@ -37,4 +37,10 @@ public class UsuarioServiceImp implements UsuarioService {
 		
 	}
 
+	@Override
+	public void actualizarPartida(Usuario usuario) {
+		usuarioRepositorio.save(usuario);
+		
+	}
+
 }

@@ -93,5 +93,17 @@ public class PartidaController {
 		modelo.addAttribute("partidas", partidas);
 		return "buscarpartida";
 	}
+	@GetMapping("/unirse-partida/{id}")
+	public String unirsePartida(@PathVariable("id") Long id,Model model) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		Usuario us = usuarioService.findUsuarioByUsername(auth.getName());
+		
+		Partida partida = partidaService.buscarPartidaPorId(id);
+		us.getPartidas().add(partida);
+		usuarioService.actualizarPartida(us);
+		
+		return "mispartidas";
+		
+	}
 
 }

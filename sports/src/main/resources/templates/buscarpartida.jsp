@@ -79,8 +79,10 @@
 												 	<td th:text="${partida.ciudad}"></td>
 												 	<td th:text="${partida.fecha}"></td>
 												 	<td th:text="${partida.horaComienzo}"></td>
-												 	
-												 	
+												 	<td th:text="${partida.participantes}"></td>
+												 	<td th:text="${partida.descripcion}"></td>
+												 	<td><a th:href="@{/unirse-partida/{id}(id=${partida.id})}"  class="btn btn-success btn-sm active" role="button" aria-pressed="true">Unirse</a></td>
+												
 									</tr>
 								</tbody>
 							</table>
